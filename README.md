@@ -129,6 +129,9 @@ const topleft: f64 = A.get(0, 0);
 const bottomright: f64 = A.get(1, 1);
 A.set(1, 0, 42.0);
 
+try std.testing.expectEqual(0.0, A.get(2, 2)); // out of bounds elements are zero
+A.set(2, 2, 2.0); // writing out of bounds does nothing
+
 const index: usize = A.flat_index(0, 1); // gets the index into the matrix's data slice for an element
 const topright: f64 = A.get_data()[index];
 const rowcol = A.unflat_index(index); // reverses the operation
