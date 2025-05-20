@@ -1,6 +1,6 @@
 # Basic Linear Algebra Subprograms (BLAS) Wrapper for Zig
 
-This is a thin wrapper around CBLAS, providing some API conveniences:
+A thin wrapper around CBLAS, providing some API conveniences:
 - Default arguments for common use cases, allowing most BLAS calls to be shorter
 - A matrix implementation for common packed storage layouts
 - Doc comments on every BLAS function for a quick reference on what they do
@@ -53,7 +53,7 @@ So, it wouldn't make sense to include them in this implementation.
 2. CBLAS implementation library
     - e.g. ATLAS, OpenBLAS, etc...
 
-ATLAS and OpenBLASS are often available as system libraries, but installing these libraries is beyond the scope of this guide.
+ATLAS and OpenBLAS are often available as system libraries, but installing these libraries is beyond the scope of this guide.
 To link a system library, add either of these lines to `build.zig`:
 
 ```zig
